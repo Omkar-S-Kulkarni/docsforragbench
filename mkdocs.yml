@@ -1,0 +1,108 @@
+
+site_name: RAGBench Documentation
+site_description: Layered, Independent, Auto-Chainable RAG Framework
+site_author: RAGBench Contributors
+
+repo_name: Omkar-S-Kulkarni/docsforragbench
+repo_url: https://github.com/Omkar-S-Kulkarni/docsforragbench
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+# Exclude the duplicate README homepage.
+exclude_docs: |
+  README.md
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - Quick Guide: getting-started/quickstart.md
+      - Installation Guide: guides/INSTALLATION_GUIDE.md
+      - Architecture: getting-started/architecture.md
+
+  - Comprehensive Guides:
+      - Complete Guide - Part 1: guides/COMPREHENSIVE_GUIDE.md
+      - Complete Guide - Part 2: guides/COMPREHENSIVE_GUIDE_PART2.md
+
+  - Tutorials:
+      - Overview: tutorials/index.md
+
+  - Layer Documentation:
+      - Overview: layers/index.md
+
+  - Use Cases:
+      - Overview: use-cases/index.md
+
+  - API Reference:
+      - Overview: api/index.md
+
+  - Advanced Topics:
+      - Overview: advanced/index.md
+
+  - Configuration:
+      - Overview: configuration/index.md
+
+  - Troubleshooting:
+      - Overview: troubleshooting/index.md
+
+  - Contributing:
+      - Overview: contributing/index.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Omkar-S-Kulkarni/ragbench
+
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/ragbench-ai/
